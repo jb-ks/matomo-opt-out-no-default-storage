@@ -11,7 +11,7 @@
  * set whether you have your Matomo installation respect the browser’s DoNotTrack option
  * @var doNotTrackRespected boolean
  */
-var doNotTrackRespected = true;
+var doNotTrackRespected = false;
 
 /**
  * language snippets
@@ -42,7 +42,7 @@ function matomoDisplayStatus()
 		$(this).find('.js').css('display', 'inline');
 		$(this).find('.nojs').css('display', 'none');
 
-		if (localStorage.getItem('matomoTrackingEnabled') === 'true') {
+		if (localStorage.getItem('matomoTrackingEnabled') === null) {
 			$(this).find('input[name="matomo-optout"]').prop('checked', true);
 			for (var langAct in langSnippets) {
 				$(this).find('label[for="matomo-optout-' + langAct + '"]').html(langSnippets[langAct].trackingActive);
@@ -64,7 +64,13 @@ function matomoDisplayStatus()
 function matomoChangeStatus()
 {
 	if (typeof(Storage) !== 'undefined') {
-		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === 'true') ? 'false' : 'true';
+		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === null) ? 'false' : ;
+		
+		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') !== 'true') ? 'false' : ;
+		
+		if (localStorage.getItem('matomoTrackingEnabled') === 'false') {
+		    localStorage.removeItem('matomoTrackingEnabled');
+		}
 		matomoDisplayStatus();
 	}
 }
