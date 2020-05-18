@@ -49,4 +49,4 @@ if (localStorage.getItem('matomoTrackingEnabled') !== 'false') {
     })();
 }
 ```
-Last but not least, reference the **matomoTrackingOptOut.js** or **matomoTrackingOptOut.min.js** in your Privacy Policy page or wherever you added the above-mentioned opt-out-HTML.
+Last but not least, reference the **matomoTrackingOptOut.js** in your Privacy Policy page or wherever you added the above-mentioned opt-out-HTML.
