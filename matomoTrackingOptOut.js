@@ -64,11 +64,9 @@ function matomoDisplayStatus()
 function matomoChangeStatus()
 {
 	if (typeof(Storage) !== 'undefined') {
+		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === 'false') ? 'true' : ;
 		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === null) ? 'false' : ;
-		
-		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') !== 'true') ? 'false' : ;
-		
-		if (localStorage.getItem('matomoTrackingEnabled') === 'false') {
+		if (localStorage.getItem('matomoTrackingEnabled') === 'true') {
 		    localStorage.removeItem('matomoTrackingEnabled');
 		}
 		matomoDisplayStatus();
