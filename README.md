@@ -1,6 +1,8 @@
-# Matomo Opt-Out JavaScript without iframe and without cookies
+# Matomo Opt-Out Javascript without iframe, without cookies and without default writing of the storage
 
 Inspired by one line of code in the HTML of [tu-dresden.de](https://tu-dresden.de/) I created a script that lets users opt-out of [Matomo](https://matomo.org/) *(formerly Piwik)* data collection – without the need for cookies or the default iframe provided by Matomo.
+
+This fork avoids the default writing of "true" to the storage "matomoTrackingEnabled". 
 
 ### Features
 
