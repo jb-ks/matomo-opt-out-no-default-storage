@@ -29,22 +29,13 @@ Change *en* (3×) for any language code you like, but take care of adding this l
 </p>
 ```
 ### Additional JavaScript
-This enables Matomo tracking at its first call and should be called on every page on the website (e.g. in a script that gets loaded on every page). Take care to call it …
-- … before the actual opt-out script
-- … before the Matomo/Piwik integration
-
-```javascript
-if (typeof(Storage) !== 'undefined') {
-	if (localStorage.getItem('matomoTrackingEnabled') === null) {
-		localStorage.setItem('matomoTrackingEnabled', 'true');
-	}
-}
-```
 
 Wrap your Matomo JavaScript Tracking Code embedding in this condition:
 
 ```javascript
-if (localStorage.getItem('matomoTrackingEnabled') !== 'false') {
+if (     ((typeof(Storage) !== 'undefined') && (localStorage.getItem('matomoTrackingEnabled') === null))
+      || (typeof(Storage) === 'undefined') )
+    {
     var _paq = _paq || [];
     _paq.push(['disableCookies']);
         ...
