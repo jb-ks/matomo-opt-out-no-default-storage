@@ -25,7 +25,7 @@ Change *en* (3×) for any language code you like, but take care of adding this l
         <input type="checkbox" name="matomo-optout" id="matomo-optout-en" checked>
         <label for="matomo-optout-en"></label>
     </span>
-    <span class="nojs">It appears you have deactived JavaScript in your browser. This feature is only available with JavaScript turned on. If you don’t want your data to be collected, you can still turn on <em>Do Not Track</em> in your browser which is a general setting and is being respected by our Matomo installation.</span>
+    <span class="nojs">It appears you have deactived JavaScript in your browser. This feature is only available with JavaScript turned on.</span>
 </p>
 ```
 ### Additional JavaScript
