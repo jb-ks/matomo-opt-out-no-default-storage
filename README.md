@@ -9,7 +9,7 @@ This fork avoids the default writing of "true" to the storage "matomoTrackingEna
 - no iframe
 - no cookies (using HTML5 Web Storage instead)
 - fallback message for disabled JavaScript
-- fallback message for old browsers that don’t support HTML5 Web Storage
+- fallback message for very old browsers that don’t support HTML5 Web Storage (approx. before 2010)
 - check for browser’s *Do Not Track* setting
 - support for multiple languages in one page
 
