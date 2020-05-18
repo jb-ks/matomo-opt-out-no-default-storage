@@ -2,7 +2,7 @@
 
 Inspired by one line of code in the HTML of [tu-dresden.de](https://tu-dresden.de/) I created a script that lets users opt-out of [Matomo](https://matomo.org/) *(formerly Piwik)* data collection – without the need for cookies or the default iframe provided by Matomo.
 
-This fork avoids the default writing of "true" to the storage "matomoTrackingEnabled". 
+This fork avoids the default writing of "true" to the storage "matomoTrackingEnabled". Instead null (return of getitem if the item does not exist) is interpreted as "true".
 
 ### Features
 
