@@ -63,14 +63,13 @@ function matomoDisplayStatus()
  */
 function matomoChangeStatus()
 {
-	if (typeof(Storage) !== 'undefined') {
-		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === 'false') ? 'true' : ;
-		localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === null) ? 'false' : ;
-		if (localStorage.getItem('matomoTrackingEnabled') === 'true') {
-		    localStorage.removeItem('matomoTrackingEnabled');
-		}
-		matomoDisplayStatus();
-	}
+	 if (typeof(Storage) !== 'undefined') {
+                localStorage.matomoTrackingEnabled = (localStorage.getItem('matomoTrackingEnabled') === 'false') ? 'true' : 'false';
+                if (localStorage.getItem('matomoTrackingEnabled') === 'true') {
+                     localStorage.removeItem('matomoTrackingEnabled');
+                      }
+                matomoDisplayStatus();
+                }
 }
 
 /**
