@@ -21,7 +21,7 @@ Add this to the page(s) where you want your visitors to find the opt-out checkbo
 Change *en* (3×) for any language code you like, but take care of adding this language to the matomoTrackingOptOut.js (*en* and *de* are added by default). You can add this HTML to one single page multiple times in different languages if you wish.
 ```html
 <script src="......jquery-2.x.x.min.js"></script>
-<script src="matomo-opt-out.js"></script>
+<script src="matomoTrackingOptOut.js"></script>
 
 <p class="matomo-optout" lang="de">
     <span class="js" style="display: none;">
