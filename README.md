@@ -20,13 +20,24 @@ This fork avoids the default writing of "true" to the storage "matomoTrackingEna
 Add this to the page(s) where you want your visitors to find the opt-out checkbox – probably within the privacy statement.
 Change *en* (3×) for any language code you like, but take care of adding this language to the matomoTrackingOptOut.js (*en* and *de* are added by default). You can add this HTML to one single page multiple times in different languages if you wish.
 ```html
-<p class="matomo-optout" lang="en">
-    <span class="js" style="display:none;">
-        <input type="checkbox" name="matomo-optout" id="matomo-optout-en" checked>
-        <label for="matomo-optout-en"></label>
+<script src="......jquery-2.x.x.min.js"></script>
+<script src="matomo-opt-out.js"></script>
+
+<p class="matomo-optout" lang="de">
+    <span class="js" style="display: none;">
+        <input id="matomo-optout-de" checked="checked" name="matomo-optout" type="checkbox" />
+        <label for="matomo-optout-de"></label>
     </span>
     <span class="nojs">It appears you have deactived JavaScript in your browser. This feature is only available with JavaScript turned on.</span>
 </p>
+
+<script>
+    matomoDisplayStatus();
+    let sel = document.getElementById('matomo-optout-de');
+    sel.addEventListener ("click", function () {
+       matomoChangeStatus();
+    });
+</script>
 ```
 ### Additional JavaScript
 
